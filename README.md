@@ -1,29 +1,35 @@
-Fotorama plugin 0.1.1
-========================
-A simple, stunning, powerful jQuery gallery.
-__Currently Experimental__
+Fotorama plugin 0.6.1
+=====================
+A jQuery image gallery with carousel.
 
 How do I install this?
 ----------------------
 1. Download and install [Yellow](https://github.com/datenstrom/yellow/).  
-2. If you have not installed [jQuery for Yellow](https://github.com/nogginfuel/YellowJquery), please download
-and install it into your `system/plugins` folder before adding this plugin.
-3. Download [fotorama.php](fotorama.php?raw=true), copy it into your `system/plugins` folder.
+2. Download [fotorama.php](fotorama.php?raw=true), copy it into your `system/plugins` folder.  
 
 To uninstall delete the plugin.
 
-How to add fotorama to an image?
---------------------------------
-Create an element in the format `<div class="fotorama"></div>`, you can add additional styles to the class. 
+How to add a gallery?
+---------------------
+Create a `[fotorama]` shortcut.
 
-The plugin uses [Fotorama v4.6.4](https://github.com/artpolikarpov/fotorama) by Artem Polikarpov.
-It's licensed under [MIT](http://opensource.org/licenses/MIT). For full Fotorama documentation please visit its [website](http://fotorama.io/)
+The following arguments are available:
+  
+`PATTERN` = file name as [regular expression](https://en.wikipedia.org/wiki/Regular_expression)  
+`STYLE` = gallery style  
+`NAV` = navigation style, one of the following: dots, thumbs, false  
+`AUTOPLAY` = play images automatically, delay time in milliseconds  
+
+The plugin uses [Fotorama v4.6.4](http://fotorama.io/) by Artem Polikarpov, which is based on jQuery. It's licensed under [MIT license](http://opensource.org/licenses/MIT). Fotorama supports most web browsers, including Chrome, Firefox, Safari, Opera and IE. Files are served from [cdnjs](https://cdnjs.com), you can configure a different CDN or your own server.
+
+Example
+-------
+Adding an image gallery:
+
+    [fotorama]
+    [fotorama photo.*jpg]
+    [fotorama photo.*jpg - thumbs 5000]
 
 Feedback
 ---------------
 All feedback is welcome.
-
-
-Hat Tip
----------------
-A special thank you to [Mark Seuffert](https://github.com/markseu) for helping bring this plugin to life.

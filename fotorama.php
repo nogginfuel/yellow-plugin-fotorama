@@ -46,7 +46,7 @@ class YellowFotorama
 					htmlspecialchars($autoplay)."\" data-loop=\"true\">\n";
 				foreach($files as $file)
 				{
-					list($width, $height) = $this->yellow->toolbox->detectImageInfo($file->fileName);
+				//	list($width, $height) = $this->yellow->toolbox->detectImageInfo($file->fileName);
 					$output .= "<img src=\"".htmlspecialchars($file->getLocation())."\" width=\"".htmlspecialchars($width)."\" height=\"".
 						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation())."\" title=\"".
 						basename($file->getLocation())."\" />\n";
